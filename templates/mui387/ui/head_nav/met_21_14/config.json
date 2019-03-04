@@ -1,0 +1,20 @@
+{
+    "css":[
+        "{$metui_url1}vendor/flag-icon-css/flag-icon.min.css",
+        "{$metui_url2}vendor/webui-popover/webui-popover.min.css",
+        "{$metui_url3}plugin/swiper/swiper-3.3.1.min.css",
+        "ui/css/img/fullpage.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/s2t/jquery.s2t.js",
+        "{$metui_url3}plugin/jquery.lazyload.min.js",
+        "{$metui_url2}vendor/webui-popover/jquery.webui-popover.min.js",
+        "{$metui_url3}plugin/swiper/swiper-3.3.1.jquery.min.js",
+    	"ui/js/img/fullpage.js",
+    	"ui/js/img/nav/modernizr.custom.js",
+    	"ui/js/img/nav/classie.js",
+    	"ui/js/img/nav/mlpushmenu.js",
+        "ui/js/index.js"
+    ]
+}

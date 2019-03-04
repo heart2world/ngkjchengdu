@@ -1,0 +1,548 @@
+@charset "utf-8";
+/* 首页关于我们 */
+$uicss.met-index-body.bgcolor{background:$bodybgcolor$; background:$bgcolor$;}
+$uicss.met-index-body.bgpic{background:url($bgpic$) no-repeat;background-size: cover;background-position: center;}
+$uicss.met-index-body{padding:$padding$px 0px;}
+$uicss.met-index-body h2{font-size:36px;color:$firstcolor$;color:$titlecolor$;}
+$uicss.met-index-body p.desc{padding:0 10%;font-size:16px;color:$secondcolor$;color:$desccolor$;}
+// $uicss .met-editor{margin-top:50px;}
+$uicss .met-editor div{max-width:100%;}
+$uicss{
+  max-height: 100vh;
+  overflow:hidden;
+}
+@media (max-width:991px){
+   $uicss.met-index-body {padding:$padding_p$px 0px;}
+	$uicss .met-editor{margin-top:40px;}
+}
+$uicss .fp-tableCell .product_box{
+    padding-top:100px;
+}
+    $uicss .swiper-container {
+      width: 100%;
+      height: calc(100vh - 160px);
+    }
+    $uicss .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      opacity:1!important;
+      transform:translate3d(0px, 0px, 0px)!important;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+$uicss .hero-slides {
+  --page: 0;
+  padding:0 3vw;
+}
+$uicss .hero-slides .headers {
+  height: 8vh;
+  line-height: 8vh;
+  position: relative;
+}
+$uicss .hero-slides .headers .logos {
+  font-size: 2.5vh;
+  font-style: italic;
+  text-align:left;
+}
+$uicss .hero-slides .headers .logos h3,
+$uicss .hero-slides .headers .logos p{
+  display:inline-block;
+}
+$uicss .hero-slides .headers .logos h3 a{
+  color:$firstcolor$;
+  color:$box_title_color$;
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+$uicss .hero-slides .headers .logos h3 a:hover{
+  color:$thirdcolor$;
+  color:$box_title_hov_color$;
+}
+$uicss .hero-slides .headers .logos p{
+  font-size:15px;
+  color:$secondcolor$;
+  color:$box_desc_color$;
+}
+$uicss .hero-slides .headers .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+$uicss .hero-slides .headers .menu .more{
+  font-size:22px;
+  color:$firstcolor$;
+  color:$box_more_color$;
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+$uicss .hero-slides .headers .menu:hover .more{
+  color:$thirdcolor$;
+  color:$box_more_hov_color$;
+}
+$uicss .hero-slides .headers .menu .hamburgers {
+  display: inline-block;
+}
+$uicss .hero-slides .headers .menu .hamburgers .slice{
+  background:$firstcolor$;
+  background:$box_more_color$;
+  height: 0.2vh;
+  width: 1vw;
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+$uicss .hero-slides .headers .menu:hover .hamburgers .slice{
+  background:$thirdcolor$;
+  background:$box_more_hov_color$;
+} 
+$uicss .hero-slides .headers .menu:hover .hamburgers .slice{
+  width: 1.5vw;
+}
+$uicss .hero-slides .headers .menu .hamburgers .slice:not(:last-child) {
+  margin-bottom: 0.6vh;
+}
+$uicss .hero-slides .swiper-container {
+  position: relative;
+  --button-height: 6vh;
+  --button-spacing: 0.2vh;
+  overflow:hidden
+}
+$uicss .hero-slides .swiper-container .button {
+  width:80px;
+  height:50px;
+  background:$thirdcolor$;
+  background:$pn_color$;
+  color:$pn_icon_color$;
+  position: absolute;
+  right: 5.375vw;
+  top: 38vh;
+  z-index: 100;
+    outline: none;
+  cursor: pointer;
+}
+$uicss .hero-slides .swiper-container .button:before, $uicss .hero-slides .swiper-container .button:after {
+  line-height: var(--button-height);
+  position: absolute;
+  margin-left: -0.25vw;
+  pointer-events: none;
+  -webkit-transform: scale(0.75, 1.5);
+          transform: scale(0.75, 1.5);
+  transition: 125ms ease-in-out;
+}
+$uicss .hero-slides .swiper-container .button:before {
+  left: 50%;
+}
+$uicss .hero-slides .swiper-container .button:after {
+  opacity: 0;
+}
+$uicss .hero-slides .swiper-container .button:hover:before, $uicss .hero-slides .swiper-container .button:hover:after {
+  transition: 250ms ease-in-out;
+}
+$uicss .hero-slides .swiper-container .button:hover:before {
+  opacity: 0;
+}
+$uicss .hero-slides .swiper-container .button:hover:after {
+  left: 50% !important;
+  opacity: 1;
+}
+$uicss .hero-slides .swiper-container .button-next {
+  margin-top:-60px;
+}
+// $uicss .hero-slides .swiper-container .button-next:before, $uicss .hero-slides .swiper-container .button-next:after {
+//   content: '>';
+// }
+$uicss .hero-slides .swiper-container .button-next:after {
+  left: 30%;
+}
+$uicss .hero-slides .swiper-container .button-next:hover:before {
+  left: 70%;
+}
+$uicss .hero-slides .swiper-container .button-prev {
+  margin-top:0;
+  opacity:1;
+  transition: 500ms opacity;
+}
+// $uicss .hero-slides .swiper-container .button-prev:before,
+// $uicss .hero-slides .swiper-container .button-prev:after {
+//   content: '<';
+// }
+$uicss .button i{
+    margin-top: 18%;
+    font-size: 25px;
+}
+$uicss .hero-slides .swiper-container .button-prev:after {
+  left: 70%;
+}
+$uicss .hero-slides .swiper-container .button-prev:hover:before {
+  left: 30%;
+}
+$uicss .hero-slides .swiper-container .button-next-catch,
+$uicss .hero-slides .swiper-container .button-prev-catch {
+  width: 10vw;
+  height: 76vh;
+  position: absolute;
+  top: 0;
+  z-index: 90;
+}
+$uicss .hero-slides .swiper-container .button-next-catch {
+  right: 0;
+}
+$uicss .hero-slides .swiper-container .button-prev-catch {
+  left: 0;
+}
+$uicss .hero-slides .swiper-wrapper {
+  --slides-height: 76vh;
+  width: auto;
+  height: var(--slides-height);
+  font-size: 0;
+  white-space: nowrap;
+  position: absolute;
+  -webkit-transform: translate3D(calc(var(--page) * -80vw), 0, 0);
+          transform: translate3D(calc(var(--page) * -80vw), 0, 0);
+  transition: 1500ms -webkit-transform cubic-bezier(0.7, 0, 0.3, 1);
+  transition: 1500ms transform cubic-bezier(0.7, 0, 0.3, 1);
+  transition: 1500ms transform cubic-bezier(0.7, 0, 0.3, 1), 1500ms -webkit-transform cubic-bezier(0.7, 0, 0.3, 1);
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.5vw;
+  width: 24em;
+  background: $bq_bg$;
+
+  background-size: cover;
+  background-position: center;
+  white-space: normal;
+  word-break: break-word;
+  position: relative;
+  pointer-events: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .headline{
+    color:$firstcolor$;
+    color:$title_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .location{
+ color:$secondcolor$;
+  color:$desc_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .location .price{
+  color:$price_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .location{
+  color:$secondcolor$;
+  color:$desc_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number{
+  color:$thirdcolor$;
+  color:$index_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide:before {
+  content: '';
+  display: block;
+  background: linear-gradient(180deg, rgba(86, 97, 108, 0) 0%, $hov_botcolor$ 100%);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  -webkit-filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.5));
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number, $uicss .hero-slides .swiper-wrapper .swiper-slide .number:before, $uicss .hero-slides .swiper-wrapper .swiper-slide .number:after {
+  vertical-align: middle;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number:before, $uicss .hero-slides .swiper-wrapper .swiper-slide .number:after {
+  display: inline-block;
+  content: '';
+  height: 0.133em;
+  margin-top: -0.2em;
+  background:$thirdcolor$;
+  background:$index_color$;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number:before {
+  width: 0;
+  margin-left: 0;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number:after {
+  width: 3em;
+  margin-left: 1em;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .body {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .location,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .headline {
+  position: relative;
+  bottom: 0;
+  cursor: default;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .number:after,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .location,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .headline,
+$uicss .hero-slides .swiper-wrapper .swiper-slide .link {
+  transition: 375ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .location {
+  font-weight: 100;
+  margin-bottom: 1.5em;
+  transition-delay: 60ms;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .headline {
+  font-size: 1.2em;
+  font-weight: normal;
+  transition-delay: 50ms;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .link {
+  width:100%;
+  display:block;
+  background: $thirdcolor$;
+  background: $more_bg$;
+  color:$more_color$;
+  padding: 0.5em 1.25em;
+  font-size: 1.33em;
+  opacity: 0;
+  position: absolute;
+  bottom: -2em;
+  pointer-events: none;
+  transition-delay: 25ms;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide .link:hover{
+  color:$thirdcolor$;
+  color:$more_hov_color$;
+  background: none;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active:before, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover:before {
+  opacity: 1;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .number:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .number:after,
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .location,
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .headline,
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .link, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .number:before,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .number:after,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .location,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .headline,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .link {
+  transition: 500ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .number:before, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .number:before {
+  width: 3em;
+  margin-right: 1em;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .number:after, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .number:after {
+  width: 0;
+  margin-right: 0;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .location,
+$uicss .hero-slides .swiper-wrapper .swiper-slide:hover .location {
+  transition-delay: 0;
+  bottom: 5em;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .headline, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .headline {
+  transition-delay: 100ms;
+  bottom: 5em;
+}
+$uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .link, $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .link {
+  bottom: 0;
+  opacity: 1;
+  transition-delay: 250ms;
+  pointer-events: auto;
+}
+$uicss .hero-slides #footer {
+  height: 12vh;
+  font-size: 1vh;
+}
+$uicss .hero-slides #footer #dribbble {
+  border-radius: 2vh;
+  position: absolute;
+  bottom: 4vh;
+  right: 4vh;
+  transition: 300ms cubic-bezier(0.7, 0, 0.3, 1);
+  padding-left: 1.5vh;
+}
+$uicss .hero-slides #footer #dribbble:before, $uicss .hero-slides #footer #dribbble:after {
+  vertical-align: middle;
+  transition: inherit;
+}
+$uicss .hero-slides #footer #dribbble:before {
+  display: inline;
+  content: 'View original Dribbble';
+  font-size: 2vh;
+  opacity: 0;
+  -webkit-transform: translate3D(-200px, 0, 0);
+          transform: translate3D(-200px, 0, 0);
+}
+$uicss .hero-slides #footer #dribbble:after {
+  content: '';
+  display: inline-block;
+  width: 4vh;
+  height: 4vh;
+  margin-left: 1vh;
+  background-image: url(https://alca.tv/static/u/82fde61b-28ef-4f17-976e-8f1abb5a1165.png);
+  background-size: contain;
+  background-position: center;
+}
+$uicss .hero-slides #footer #dribbble.swiper-slide-active,
+$uicss .hero-slides #footer #dribbble:hover {
+  background: #e94e89;
+}
+$uicss .hero-slides #footer #dribbble.swiper-slide-active:before,
+$uicss .hero-slides #footer #dribbble:hover:before {
+  opacity: 1;
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+  transition-delay: 50ms;
+}
+$uicss .hero-slides #footer #dribbble.swiper-slide-active:after, $uicss .hero-slides #footer #dribbble:hover:after {
+  -webkit-filter: saturate(0%) contrast(200%) brightness(200%) invert(100%);
+          filter: saturate(0%) contrast(200%) brightness(200%) invert(100%);
+}
+
+@media (min-width: 1200px) and (max-width: 1699px) {
+  body {
+    --slides-per-page: 3;
+  }
+
+  $uicss .hero-slides .swiper-wrapper .swiper-slide {
+    font-size: 1vw;
+  }
+}
+@media (min-width: 1700px) {
+  body {
+    --slide-per-age: 4;
+  }
+
+  $uicss .hero-slides .swiper-wrapper .swiper-slide {
+    font-size: 0.75vw;
+  }
+}
+@media (max-width:1024px) {
+  $uicss .hero-slides .headers .menu .more{
+  font-size:30px;
+}
+  $uicss .hero-slides .headers .menu .hamburgers .slice{
+      width:2vw;
+  }
+  $uicss .hero-slides .headers .menu:hover .hamburgers .slice{
+  width:3vw;
+}
+  $uicss .hero-slides .swiper-wrapper {
+    height:55vh;
+  }
+  $uicss .fp-tableCell .product_box{
+      padding-top:200px;
+  }
+}
+@media (max-width:768px) {
+ $uicss .fp-tableCell .product_box{
+      padding-top:200px;
+  }
+}
+@media (max-width:767px) {
+  $uicss p,
+  $uicss .hero-slides .swiper-wrapper .swiper-slide .link,
+  $uicss .hero-slides .swiper-wrapper .swiper-slide .number{
+    font-size:14px;
+  }
+  $uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .headline,
+  $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .headline {
+    transition-delay: 100ms;
+    bottom: 3em;
+  }
+  $uicss .hero-slides .swiper-wrapper .swiper-slide.swiper-slide-active .location,
+  $uicss .hero-slides .swiper-wrapper .swiper-slide:hover .location {
+    transition-delay: 0;
+    bottom: 5em;
+  }
+  $uicss .hero-slides .headers {
+    height: 8vh;
+    line-height: normal;
+    position: relative;
+  }
+  $uicss .hero-slides .headers .logos h3,
+  $uicss .hero-slides .headers .logos p{
+    display:block;
+    margin:0;
+    text-align:center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  $uicss .hero-slides .headers .menu {
+    display:none;
+  }
+  $uicss .hero-slides .swiper-container .button {
+    display:none;
+  }
+  $uicss .hero-slides{
+    padding:0% 10%;
+  }
+  $uicss .swiper-button-next,
+  $uicss .swiper-button-prev{
+    display: none;
+  }
+
+  $uicss .hero-slides .swiper-wrapper .swiper-slide .link {
+    position: static;
+  }
+  $uicss .hero-slides .swiper-wrapper {
+    height:100%;
+    max-height:100%;
+  }
+  $uicss .fp-tableCell .product_box{
+      padding-top: 83.44px;
+  }
+  $uicss .hero-slides .swiper-wrapper{
+    padding:0;
+  }
+  $uicss .hero-slides .swiper-wrapper .swiper-slide .body {
+    padding-bottom: 20px;
+  }
+  $uicss .hero-slides .swiper-wrapper .swiper-slide .headline {
+    font-size:3em;
+    font-weight: normal;
+    transition-delay: 50ms;
+  }
+}

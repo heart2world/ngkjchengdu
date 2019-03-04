@@ -1,0 +1,1009 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- 
+ @media (min-width: 1600px){
+ 	$uicss-top-head .container{
+		width:1510px;
+	}
+}
+*/
+$uicss-top-head{
+	padding: 10px 0;
+}
+$uicss-top-head caption,
+$uicss-top-head th {
+    text-align: left;
+
+}
+$uicss-top-head h1,
+$uicss-top-head h2,
+$uicss-top-head h3,
+$uicss-top-head h4,
+$uicss-top-head h5,
+$uicss-top-head h6{
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+}
+$uicss-top-head q:before,
+$uicss-top-head q:after{
+    content:'';
+}
+/* Custom CSS
+ * --------------------------------------- */
+$uicss h1{
+	font-size: 6em;
+}
+$uicss p{
+	font-size: 2em;
+}
+
+.section{
+	text-align:center;
+}
+$uicss-top-head#menu li {
+	display:inline-block;
+	margin:0px;
+	color: #000;
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+
+$uicss-top-head#menu li a{
+	text-decoration:none;
+}
+$uicss-top-head#menu li a,
+$uicss-top-head#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+$uicss-top-head#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 70;
+	width: 100%;
+	margin:0;
+}
+
+/* Demos Menu
+ * --------------------------------------- */
+/*侧边导航*/
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+$uicss-pusher.mp-pusher {
+	position: relative;
+	left: 0;
+	height: 100%;
+	/*left: 0!important;*/
+}
+
+$uicss-menu.mp-menu{
+	position: absolute; /* we can't use fixed here :( */
+	top: 0;
+	right:-300px;
+	z-index: 1600;
+	width: 300px;
+	height: 100%;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(0);
+	text-align: right;
+	max-height:100vh;
+}
+@media (max-width:450px){
+	$uicss-menu.mp-menu{
+		right:-250px;
+		width: 250px;
+		transition: right .5s;
+	}
+	$uicss-menu.mp-menu.modins{
+		right:0px;
+		width: 250px;
+	}
+}
+$uicss-menu .mp-level {
+	position: absolute;
+	top: 0;
+	left:0px;
+	width: 100%;
+	height: 100%;
+	background:$bodybgcolor$;
+	background:$right_head_bg$;
+	-webkit-transform: translateX(130%);
+	-moz-transform: translateX(130%);
+	-ms-transform: translateX(130%);
+	transform: translateX(130%);
+	z-index:1;
+	max-height:100vh;
+}
+
+/* overlays for pusher and for level that gets covered */
+$uicss-menu .mp-pusher::after,
+$uicss-menu .mp-level::after,
+$uicss-menu .mp-level::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 0%;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+	-moz-transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+}
+
+$uicss-menu .mp-pusher::after,
+$uicss-menu .mp-level::after {
+	background:$thirdcolor$;
+	background:$right_head_after$;
+	opacity:$right_head_after_opac$;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+	-moz-transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.3s, height 0.5s;
+}
+
+$uicss-menu .mp-level::after {
+	z-index:0;
+}
+
+$uicss-menu .mp-pusher.mp-pushed::after,
+$uicss-menu .mp-level.mp-level-overlay::after {
+	width: 100%;
+	height: 100%;
+
+}
+
+$uicss-menu .mp-level.mp-level-overlay {
+	cursor: pointer;
+}
+
+$uicss-menu .mp-level.mp-level-overlay.mp-level::before {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	opacity: 1;
+}
+
+$uicss-pusher.mp-pusher,
+$uicss-pusher .mp-level {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* overlap */
+$uicss-pusher .mp-overlap .mp-level.mp-level-open {
+	box-shadow: -1px 0 2px $right_head_show$;
+	-webkit-transform: translateX(40px);
+	-moz-transform: translateX(40px);
+	transform: translateX(40px);
+}
+
+/* First level */
+$uicss-menu.mp-menu > .mp-level,
+$uicss-menu.mp-menu > .mp-level.mp-level-open,
+$uicss-menu.mp-menu.mp-overlap > .mp-level,
+$uicss-menu.mp-menu.mp-overlap > .mp-level.mp-level-open {
+	box-shadow: none;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+}
+
+/* cover */
+$uicss-menu .mp-cover .mp-level.mp-level-open {
+	-webkit-transform: translateX(0, 0, 0);
+	-moz-transform: translateX(0, 0, 0);
+	transform: translateX(0, 0, 0);
+}
+
+$uicss-menu .mp-cover .mp-level.mp-level-open > ul > li > .mp-level:not(.mp-level-open) {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+/* content style */
+$uicss-menu ul.menu--dustu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-height: calc(100vh - 170px);
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+$uicss-menu ul.menu--dustu::-webkit-scrollbar {
+    display: none;
+}
+
+$uicss-menu.mp-menu h2 {
+	margin: 0;
+	padding:10px 10px 10px 40px;
+	color: rgba(0,0,0,0.4);
+	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+	font-weight: 300;
+	font-size: 2em;
+}
+
+$uicss-menu.mp-menu.mp-overlap h2::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 8px;
+	font-size: 75%;
+	line-height: 1.8;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.1s 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.1s 0.3s;
+	transition: opacity 0.3s, transform 0.1s 0.3s;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+$uicss-menu.mp-menu.mp-cover h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1em;
+}
+
+$uicss-menu .mp-overlap .mp-level.mp-level-overlay > h2::before {
+	opacity: 1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+}
+
+$uicss-menu.mp-menu ul li > a {
+	display: inline-block;
+	outline: none;
+	font-size: 1em;
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+
+$uicss-menu.mp-menu ul li::before {
+	position: absolute;
+	left: 10px;
+	z-index: -1;
+	color: rgba(0,0,0,0.2);
+	line-height: 3.5;
+}
+/* seems like Chrome 34.0.1847.131 needs the second shadow otherwise the transition breaks */
+
+$uicss-menu .mp-back {
+	outline: none;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	display: block;
+	font-size: 0.8em;
+	padding: 1em;
+	position: relative;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+}
+
+$uicss-menu .mp-back::after {
+	font-family: 'linecons';
+	position: absolute;
+	content: "\e037";
+	right: 10px;
+	font-size: 1.3em;
+	color: rgba(0,0,0,0.3);
+}
+
+$uicss-menu.mp-menu .mp-level.mp-level-overlay > .mp-back,
+$uicss-menu.mp-menu .mp-level.mp-level-overlay > .mp-back::after {
+	background: transparent;
+	box-shadow: none;
+	color: transparent;
+}
+
+$uicss-menu .no-csstransforms3d .mp-pusher,
+$uicss-menu .no-js .mp-pusher {
+	padding-left: 300px;
+}
+
+.no-csstransforms3d $uicss-menu.mp-menu .mp-level,
+.no-js $uicss-menu.mp-menu .mp-level {
+	display: none;
+}
+
+.no-csstransforms3d $uicss-menu.mp-menu > .mp-level,
+.no-js $uicss-menu.mp-menu > .mp-level {
+	display: block;
+	z-index:1;
+}
+$uicss-menu .display{
+	overflow: hidden;
+}
+
+$uicss-menu .display i{
+	display: inline;
+}
+
+
+$uicss-top-head{
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+/*icon*/
+$uicss-top-head .ham {
+    max-height:55px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+$uicss-top-head .ham:hover .top{
+	stroke-dashoffset: 15px;
+}
+
+$uicss-top-head .ham:hover .bottom{
+	stroke-dashoffset: 15px;
+}
+
+$uicss-top-head .line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:$thirdcolor$;
+  stroke:$top_head_more$;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+$uicss-top-head .ham6 .top {
+  stroke-dasharray: 40 172;
+}
+$uicss-top-head .ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+$uicss-top-head .ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+$uicss-top-head .ham6.actives .top {
+  stroke-dashoffset: -132px;
+}
+$uicss-top-head .ham6.actives .middle {
+  stroke-dashoffset: -71px;
+}
+$uicss-top-head .ham6.actives .bottom {
+  stroke-dashoffset: -132px;
+}
+$uicss-top-head .ham6.actives:hover path{
+	stroke-dashoffset:0;
+}
+/* 菜单悬浮选中特效*/
+$uicss-menu .menu__item>a{
+	line-height: 1;
+	position: relative;
+	display: block;
+	outline: none;
+}
+
+$uicss-dustu .menu__item-name,
+$uicss-dustu .menu__item-label {
+	position: relative;
+	padding: 0 10px;
+}
+
+$uicss-menu .menu__item-name {
+	font-size: 1em;
+}
+
+$uicss-menu .menu__item-label {
+	margin: 0 0 0 0.5em;
+}
+
+
+/*侧边导航动画*/
+$uicss-dustu .right-head li.menu__item{
+	padding-left:40px;
+}
+$uicss-dustu .menu--dustu>.menu__item {
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1.5em 0;
+	text-align:left;
+}
+
+$uicss-dustu .menu--dustu>.menu__item>.menu__item-name {
+	font-size: 1.3em;
+	font-weight: 100;
+	overflow: hidden;
+	text-transform: uppercase;
+	color:$firstcolor$;
+	color:$right_head_color$;
+	padding-bottom: 10px;
+}
+$uicss-menu .menu--dustu>.menu__item>.menu__item-name{
+    width:90%;
+}
+$uicss-dustu .menu--dustu>.menu__item>.menu__item-name::before,
+$uicss-dustu .menu--dustu>.menu__item>.menu__item-name::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:$thirdcolor$;
+	background:$top_head_hover_color$;
+	transform: translateX(-100%) translateX(-1px);
+	transition: transform 0.7s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+$uicss-menu .menu--dustu>.menu__item>.menu__item-name::before,
+$uicss-menu .menu--dustu>.menu__item>.menu__item-name::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:$thirdcolor$;
+	background:$right_head_hover_color$;
+	transform: translateX(-100%) translateX(-1px);
+	transition: transform 0.7s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+$uicss-menu ul{
+	list-style:none;
+	padding-left:0;
+}
+$uicss-dustu .menu--dustu>.menu__item:hover>.menu__item-name::before,
+$uicss-dustu .menu--dustu>.menu__item.active>.menu__item-name::before{
+	transform: translateX(100%) translateX(1px);
+}
+
+$uicss-dustu .menu--dustu>.menu__item:hover>.menu__item-name::after,
+$uicss-dustu .menu--dustu>.menu__item.active>.menu__item-name::after{
+	transform: translateX(0);
+}
+
+$uicss-dustu .menu--dustu>.menu__item>.menu__item-name::after {
+	top: calc(100% - 2px);
+	height: 2px;
+}
+$uicss-dustu .menu--dustu>.menu__item>.menu__item-label {
+	font-size: 1em;
+	margin-top: 0em;
+	color:$secondcolor$;
+	color:$right_head_desc_color$;
+	transition: color 0.7s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+$uicss-dustu .nav-top.menu--dustu>.menu__item>.menu__item-name{
+	font-size: 1.1em;
+    font-weight: normal;	
+    overflow: hidden;
+    text-transform: uppercase;
+    color:$firstcolor$;
+    color:$top_head_color$;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+$uicss-dustu .menu--dustu>.menu__item:hover>.menu__item-label,
+$uicss-dustu .menu--dustu>.menu__item:hover>a,
+$uicss-dustu .menu--dustu>.menu__item.active>.menu__item-label,
+$uicss-dustu .menu--dustu>.menu__item.active>a{
+	color:$thirdcolor$!important;
+	color:$top_head_hover_color$!important;
+}
+$uicss-menu .menu--dustu>.menu__item:hover>.menu__item-label,
+$uicss-menu .menu--dustu>.menu__item:hover>a,
+$uicss-menu .menu--dustu>.menu__item.active>.menu__item-label,
+$uicss-menu .menu--dustu>.menu__item.active>a{
+	color:$thirdcolor$!important;
+	color:$right_head_hover_color$!important;
+}
+$uicss-dustu .menu--dustu>.menu__item>a{
+	-webkit-transition: all .1s ease-out;
+	   -moz-transition: all .1s ease-out;
+	    -ms-transition: all .1s ease-out;
+	     -o-transition: all .1s ease-out;
+	        transition: all .1s ease-out;
+	        transition-delay: 0.3s;
+			-webkit-transition-delay: 0.3s;
+}
+/*多语言css调整*/
+$uicss-top-head .nav-link:focus,
+$uicss-top-head .nav-link:hover{
+	background:none;
+}
+$uicss-top-head .nav-link{
+	overflow: inherit;
+	padding:0;
+}
+$uicss-top-head .btn-outline.btn-default,
+$uicss-top-head .btn-outline.btn-defaults,
+$uicss-top-head .open>.btn-outline.btn-default.dropdown-toggle{
+	color: #76838f;
+    border:none;
+    background:none;
+}
+$uicss-menu .langjf-box .btn-cntotc{
+	background:none;
+	cursor:pointer;
+}
+/*多语言css调整*/
+
+/*登录注册css调整*/
+	$uicss-menu .dl-box .text-xs-center{
+		min-width: 200px;
+	}
+	$uicss-menu .dl-box .text-xs-center a{
+		display:inline-block!important;
+	}
+	$uicss-menu .dl-box .btn-success{
+		background:none;
+		border:none;
+	}
+	/*购物车*/
+	$uicss-menu .spCart .spCart-title{
+		color:$firstcolor$;
+		color:$right_head_shop_title_color$;
+	    font-size: 1.3em;
+	    font-weight: bold;
+	    padding: 10px;
+	    text-align: center;
+	}
+	$uicss-menu .spCart .spCart-num{
+		display: block;
+	    padding: 10px;
+	    color:$secondcolor$;
+	    color:$right_head_shop_num_color$;
+	    text-align: center;
+	}
+	$uicss-menu .vertical-align-middle{
+		color:$firstcolor$;
+		color:$right_head_shop_tips_color$;
+	}
+	$uicss-top-head .vertical-align-middle img{
+		max-height:60px;
+		max-width:300px;
+	}
+	$uicss-menu .shop_cart_bg{
+		background:$thirdcolor$;
+		background:$right_head_shop_box_bg$;
+	}
+	$uicss-menu .shop_cart_bg #topcart-body a{
+		color:$right_head_shop_box_title_color$;
+	}
+	$uicss-menu .shop_cart_bg #topcart-body .text-xs-right>span{
+		color:$right_head_shop_box_price_color$;
+	}
+	$uicss-menu .shop_cart_btn{
+		text-align:center;
+	}
+	$uicss-menu .shop_cart_btn a{
+		background:$thirdcolor$;
+		background:$right_head_shop_box_btn_bg$;
+		color:$right_head_shop_box_btn_color$;
+		border:none;
+	}
+	$uicss-menu .shop_cart_price{
+		text-align:center;
+		color:$right_head_shop_box_price_color$;
+	}
+	.spCart .list-group-item{
+		background:none;
+	}
+/*登录注册css调整*/
+
+/*调整代码*/
+$uicss-fullpage .fp-tableCell{
+	display:block;
+}
+$uicss-menu .display .nav-angle-right{
+	font-size:1em;
+	margin-left:10px;
+    float:right;
+}
+$uicss-menu .all-title{
+	font-size: 1.2em!important;
+    margin: 0!important;
+    padding:0px!important;
+    text-align: center!important;
+	margin: 25px 40px 0px 40px!important;
+	border-bottom:2px solid ;
+	border-color:$firstcolor$;
+	border-color:$right_head_bor_color$;
+}
+$uicss-menu .all-title.active,
+$uicss-menu .all-title:hover{
+	border-color:$bodybgcolor$;
+	border-color:$right_head_bg$;
+}
+
+$uicss-menu .all-title a{
+	display:inline-block;
+	color:#fff;
+}
+$uicss-top-head .head-logo{
+	float:left;
+}
+$uicss-menu .more{
+	line-height: inherit;
+}
+/*.bg1{
+	background:url($test_img$) no-repeat;background-size: cover;background-position: center;
+}*/
+$uicss-top-head .nav-tabs-inverse .nav-tabs-solid{
+	border:none;
+	margin:0;
+}
+$uicss-top-head#menu li{
+	border-radius: 0;
+	width:auto!important;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+@media (max-width:1024px){
+    $uicss-nav-tabs{
+        width:60%;
+    }
+}
+@media (max-width:768px){
+    $uicss-top-head .vertical-align-middle img{
+        max-height:60px;
+        max-width:200px;
+    }
+}
+@media (max-width:767px){
+	$uicss-nav-tabs{
+		width:40%;
+	}
+	$uicss-nav-tabs .swiper-scrollbar{
+		display:none;
+	}
+    $uicss-top-head .flexs{
+        display: flex;
+        margin:0;
+    }
+}
+@media (max-width:414px){
+    $uicss-top-head .vertical-align-middle img{
+        max-width:150px;
+    }
+    $uicss-top-head#menu li a,
+    $uicss-top-head#menu li.active a{
+        padding:5px 10px;
+        display:block;
+    }
+}
+@media (max-width:375px){
+    $uicss-top-head .vertical-align-middle img{
+        max-width:130px;
+    }
+    $uicss-top-head#menu li a,
+    $uicss-top-head#menu li.active a{
+        padding:5px;
+        display:block;
+    }
+}
+@media (max-width:320px){
+    $uicss-top-head .vertical-align-middle img{
+        max-width:100px;
+    }
+}
+
+/*预加载动画*/
+
+$uicss-loader-box{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding-top: 35vh;
+}
+$uicss-loader-box.loader-bgcolor{
+	background:$head_loader_bg_color$;
+}
+$uicss-loader-box.loader-bgpic{
+	background:url($head_loader_bg_pic$) no-repeat;background-size: cover;background-position: center;
+}
+$uicss-loader-box .loader-txt{
+	font-size:20px;
+	text-align:center;
+	color:$firstcolor$;
+	color:$head_loader_txt_color$;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color:$firstcolor$;
+    border-top-color:$head_loader_color_a$;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color:$thirdcolor$;
+    border-top-color:$head_loader_color_b$;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color:$firstcolor$;
+    border-top-color:$head_loader_color_a$;
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color:$firstcolor$;
+    border-top-color:$head_loader_color_a$;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color:$thirdcolor$;
+    border-top-color:$head_loader_color_b$;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color:$firstcolor$;
+    border-top-color:$head_loader_color_a$;
+  }
+}
+$uicss-loader-box .loader {
+  position: relative;
+  margin: 25px auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+}
+$uicss-loader-box .loader div {
+  height: 100%;
+}
+
+/* loader 1 */
+$uicss-loader-box .loader1, .loader1 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-top-color:$firstcolor$;
+  border-top-color:$head_loader_color_a$;
+  border-bottom-color:$thirdcolor$;
+  border-bottom-color:$head_loader_color_b$;
+}
+
+/*loader 2  */
+$uicss-loader-box .loader2, .loader2 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-top-color:$thirdcolor$;
+  border-top-color:$head_loader_color_b$;
+  border-left-color:$firstcolor$;
+  border-left-color:$head_loader_color_a$;
+  border-right-color:$firstcolor$;
+  border-right-color:$head_loader_color_a$;
+}
+
+/*loader 3  */
+$uicss-loader-box .loader3, .loader3 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-top-color:$firstcolor$;
+  border-top-color:$head_loader_color_a$;
+  border-left-color:$thirdcolor$;
+  border-left-color:$head_loader_color_b$;
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+          animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+/* loader 4 */
+$uicss-loader-box .loader4, .loader4 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-radius: 50%;
+  padding: 4px;
+  -webkit-animation: rotate2 4s infinite linear;
+          animation: rotate2 4s infinite linear;
+}
+
+$uicss-loader-box div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+$uicss-loader-box .loader, .loader * {
+  will-change: transform;
+}
+$uicss .dropdown-item.active{
+	background:$$;
+}
+
+
+
+$uicss-menu .right-head-wx{
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+$uicss-menu .right-head-wx ul{
+	overflow:hidden;
+	display: flex;
+	padding: 10px 20px;
+	margin-bottom: 0;
+}
+$uicss-menu .right-head-wx .tel{
+	padding:0 10px;
+	color:$firstcolor$;
+	color:$lx_color$;
+}
+$uicss-menu .right-head-wx ul li{
+	float:left;
+/*	border: 1px solid;
+	border-color:$firstcolor$;
+	border-color:$sj_color$;
+*/
+    flex:1;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease-out;
+       -moz-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+         -o-transition: all .5s ease-out;
+            transition: all .5s ease-out;
+}
+$uicss-menu .right-head-wx ul li:hover{
+	border-color:$thirdcolor$;
+	border-color:$sj_hover_color$;
+}
+$uicss-menu .right-head-wx ul li a{
+	color:$firstcolor$;
+	color:$sj_color$;
+	font-size:1.5rem;
+	-webkit-transition: all .5s ease-out;
+       -moz-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+         -o-transition: all .5s ease-out;
+            transition: all .5s ease-out;
+}
+$uicss-menu .right-head-wx ul li a:hover{
+	color:$thirdcolor$;
+	color:$sj_hover_color$;
+}
+$uicss-top-head.ny-mark{
+    background:rgba(0,0,0,0.3);
+}
+$uicss-btn-top{
+	position: fixed;
+    bottom: 3%;
+    right: 3%;
+    z-index: 2100;
+}
+$uicss-btn-top button{
+	background:$top_color$;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor:pointer;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+        -ms-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+}
+$uicss-btn-top button i{
+	font-size: 20px;
+    transform: rotate(-90deg);
+    color:$top_bg$;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+        -ms-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+}
+$uicss-btn-top button:hover{
+	background:$top_bg$;
+}
+$uicss-btn-top button:hover i{
+	color:$top_color$;
+}
+@media (max-width:767px){
+	$uicss-pusher.mp-pusher {
+		max-width: 100%;
+		overflow: hidden;
+	}
+	$uicss-pusher .mp-overlap .mp-level.mp-level-open {
+		box-shadow: -1px 0 2px $right_head_show$;
+		-webkit-transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+	$uicss-menu .right-head-wx ul{
+		padding: 10px;
+	}
+	$uicss-menu .right-head-wx ul li{
+	    padding:6px;
+	}
+	$uicss-menu .right-head.menu--dustu{
+		max-height: calc(100vh - 160px);
+	}
+	$uicss-menu .right-head-wx img{
+		max-width:80px;
+	}
+}

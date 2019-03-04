@@ -1,0 +1,252 @@
+@charset "utf-8";
+$uicss.bgcolor{background:$bodybgcolor$;background:$bgcolor$;}
+$uicss.bgpic{background:url($bgpic$) no-repeat;background-size: cover;background-position: center;}
+$uicss{padding:$padding$px 0px;}
+$uicss h2{font-size:36px;color:$firstcolor$;color:$title_color$;}
+$uicss p.desc{font-size:16px;color:$secondcolor$;color:$desc_color$;}
+@media (max-width:991px){
+   $uicss {padding:$padding_p$px 0px;}
+    $uicss .met-editor{margin-top:40px;}
+}
+@media (max-width:767px){
+   $uicss {padding:$padding_m$px 0px;}
+    $uicss .met-editor{margin-top:30px;}
+}
+
+
+$uicss .strips {
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  position: relative
+}
+.strips__strip {
+  position: absolute;
+  width: 20%;
+  min-height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  z-index:0;
+    -webkit-transition: all .5s ease-out;
+     -moz-transition: all .5s ease-out;
+      -ms-transition: all .5s ease-out;
+       -o-transition: all .5s ease-out;
+          transition: all .5s ease-out;
+}
+$uicss .strips__strip.invisible{
+      visibility: hidden!important;
+}
+@media screen and (max-width: 760px) {
+  $uicss .strips__strip {
+    min-height: 20vh;
+  }
+}
+$uicss .strips .strip__content {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+$uicss .strips .strip__content:hover:before {
+  -webkit-transform: skew(-30deg) scale(3) translate(0, 0);
+      -ms-transform: skew(-30deg) scale(3) translate(0, 0);
+          transform: skew(-30deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+$uicss .strips .strip__content:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.05;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: skew(-30deg) scaleY(1) translate(0, 0);
+      -ms-transform: skew(-30deg) scaleY(1) translate(0, 0);
+          transform: skew(-30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+$uicss .strips .strip__inner-text {
+  will-change: transform, opacity;
+  position: absolute;
+  z-index: 5;
+  top: auto;
+  left: 15%;
+  width: 70%;
+  opacity: 0;
+  -webkit-transform:scale(0);
+      -ms-transform:scale(0);
+          transform:scale(0);
+}
+
+$uicss .strips .strip__inner-text h4{
+  font-size:20px;
+  color:$firstcolor$;
+  color:$box_title_color$;
+}
+$uicss .strips .strip__inner-text p{
+  color:$secondcolor$;
+  color:$box_desc_color$;
+  font-size:15px;
+}
+$uicss .strips__strip--expanded {
+  width: 100%!important;
+  top: 0;
+  left: 0 !important;
+  z-index: 3;
+  cursor: default;
+
+}
+@media screen and (max-width: 760px) {
+  $uicss .container{
+    padding: 0;
+  }
+  $uicss .strips__strip--expanded {
+    min-height: 100vh!important;
+  }
+  $uicss .strips__strip{
+    width:100%!important;
+    left:0!important;
+    position: relative!important;
+  }
+}
+$uicss .strips__strip--expanded .strip__content:hover:before {
+  -webkit-transform: skew(-30deg) scale(1) translate(0, 0);
+      -ms-transform: skew(-30deg) scale(1) translate(0, 0);
+          transform: skew(-30deg) scale(1) translate(0, 0);
+  opacity: 0.05;
+}
+$uicss .strips__strip--expanded .strip__title {
+  opacity: 0;
+}
+$uicss .strips__strip--expanded .strip__inner-text {
+  opacity: 1;
+  -webkit-transform:scale(1);
+      -ms-transform:scale(1);
+          transform:scale(1);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+$uicss .strip__title {
+  display: block;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  font-size:$list_title_size$px;
+  color:$firstcolor$;
+  color:$list_title_color$;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@media screen and (max-width: 760px) {
+  $uicss .strip__title {
+    font-size: 28px;
+  }
+}
+
+$uicss .strip__close {
+  color:$box_close_color$;
+  position: absolute;
+  right: 3vw;
+  top: 15vh;
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  font-size: 25px;
+}
+ $uicss .strips__strip--expanded .strip__close{
+  opacity: 1;
+}
+
+/* Demo purposes */
+
+
+$uicss .set_1_btn {
+    color:$firstcolor$;
+    color:$left_more_color$;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    text-align: center;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+}
+$uicss .set_1_btn:hover {
+    text-decoration: none;
+}
+$uicss .Vbtn-1 {
+    background:transparent;
+    text-align: center;
+    transition: all 250ms linear 0s;
+    display:inline-block;
+}
+$uicss .Vbtn-1 svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+$uicss .Vbtn-1 rect {
+    fill: none;
+    stroke:$thirdcolor$;
+    stroke:$left_more_bor_color$;
+    stroke-width: 5;
+    stroke-dasharray: 422, 0;
+    transition: all 450ms linear 0s;
+}
+$uicss .Vbtn-1:hover {
+    color:$thirdcolor$;
+    color:$left_more_bor_color$;
+    background: rgba(225, 51, 45, 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+$uicss .Vbtn-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}

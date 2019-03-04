@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* 招聘详情 */
+$uicss{background: $bodybgcolor$;background:$bgcolor$;padding:30px 0;}
+$uicss .card{padding: 30px;}
+$uicss .card-metas{font-size: 12px;color: $desccolor$;}
+$uicss .card-title{color:$firstcolor$;color:$titlecolor$;}
+$uicss .card-body-footer a{border-radius: 3px;background:transparent;color:$thirdcolor$;color:$hovercolor$;border-color:$thirdcolor$;border-color:$hovercolor$; }
+$uicss .card-body-footer a:hover,$uicss .card-body-footer .btn-outline.btn-primary:focus{background:$thirdcolor$;background:$hovercolor$;border-color: $thirdcolor$;border-color: $hovercolor$; color:#fff;}
+$uicss .modal-header{
+    background:$thirdcolor$;background:$hovercolor$;
+}
+$uicss .radio-primary input[type=radio]:checked+label::before{
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss input:focus{
+border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss textarea:focus{
+    border-color: $thirdcolor$;border-color: $hovercolor$;
+}
+$uicss .btn-file{
+        border-color: $thirdcolor$;
+    background-color: $thirdcolor$;
+    border-color: $hovercolor$;
+    background-color: $hovercolor$;
+}
+$uicss .modal-footer .btn-primary{
+            border-color: $thirdcolor$;
+    background-color: $thirdcolor$;
+    border-color: $hovercolor$;
+    background-color: $hovercolor$;
+}
+$uicss .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before { outline: 5px auto $thirdcolor$;
+outline: 5px auto $hovercolor$;  
+}
+$uicss .radio-custom input[type=radio]:focus+label::before{
+    outline: 5px auto $thirdcolor$;
+    outline: 5px auto $hovercolor$; 
+}
+$uicss .modal .btn-primary{border-color: $thirdcolor$;
+    background-color: $thirdcolor$;border-color: $hovercolor$;
+    background-color: $hovercolor$;}

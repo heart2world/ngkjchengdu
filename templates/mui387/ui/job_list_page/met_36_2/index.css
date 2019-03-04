@@ -1,0 +1,132 @@
+$uicss.page-content{
+	padding: 0;
+	background-color: $bodybgcolor$;
+	background-color: $body_color$;
+}
+$uicss .content-left,$uicss .content-right{
+	padding: 0;
+	width: 50%;
+	float: left;
+	position: relative;
+}
+$uicss .main-content{
+	overflow: hidden;
+}
+$uicss .content-left .left-img{
+	max-width: 100%;
+}
+$uicss .content-right.no-left{
+	width: 100%!important;
+}
+$uicss .content-left .txt-content{
+	position: absolute;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    display: block;
+    width: inherit;
+    padding: 50px;
+}
+$uicss .content-left .txt-content .title{
+	font-size: 25px;
+	color: $left_title_color$;
+	width: 100%;
+	position: relative;
+}
+$uicss .content-left .txt-content .title:after {
+    background: $left_line_color$;
+    content: "";
+    height: 3px;
+    width: 45px;
+    left: 0;
+    margin-top: 10px;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: -15px;
+}
+
+$uicss .content-left .txt-content .desc{
+	font-size: 16px;
+	color: $left_desc_color$;
+	width: 100%;
+}
+$uicss .content-right ul{
+	list-style: none;
+	padding: 45px;
+}
+$uicss .content-right li{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid $right_line_color$;
+}
+$uicss .content-right .my-title{
+	display: inline-block;
+	float: left;
+	margin-bottom: 2rem;
+	transition: 0.6s ease;
+	color: $firstcolor$;
+	color: $right_title_color$;
+}
+$uicss .content-right .my-btn{
+	display: inline-block;
+	float: right;
+	transition: 0.6s ease;
+	color: $secondcolor$;
+	color: $right_btn_color$;
+}
+$uicss .content-right li:hover .my-title{
+	color: $thirdcolor$;
+	color: $right_title_hover$;
+}
+$uicss .content-right li:hover .my-btn{
+	color: $thirdcolor$;
+	color: $right_btn_hover$;
+	padding-right: 10px;
+}
+$uicss .content-right .my-btn .icon{
+	margin-left: 10px;
+}
+$uicss-pager{
+	margin-bottom: 20px;
+}
+$uicss-pager .met_pager{
+	margin-top: 0;
+}
+/*分页*/
+.met_pager { margin-top: 20px; text-align: center; }
+.met_pager * { display: inline-block; }
+.met_pager a { padding: 9px 15px; border: 1px solid $pagelinecolor$; border-right: none; background: $pagebg$; text-align: center; color: $pagetxt$; }
+.met_pager a:hover { background: $hoverpagebg$;color: $pagetxt$;color: $hoverpagetxt$; text-decoration: none; }
+.met_pager a.NextA { border-right: 1px solid $pagelinecolor$; }
+.met_pager .PreSpan,
+.met_pager .NextSpan { padding: 9px 15px; border: 1px solid $pagelinecolor$; background: $nopagebg$; color: $nopagetxt$; cursor: default; }
+.met_pager .firstPage,
+.met_pager .lastPage { min-width: 40px; height: 28px; line-height: 28px; }
+.met_pager a.Ahover {  background: $thirdcolor$; background: $curpagebg$;border-color:$thirdcolor$;border-color:$curpagebg$; color: $curpagetxt$; cursor: default; }
+.met_pager a.Ahover:hover { background: $thirdcolor$; background: $curpagebg$;border-color:$thirdcolor$;border-color:$curpagebg$; color: $curpagetxt$; }
+.met_pager a { text-decoration: none; }
+.met_pager a:active,
+.met_pager a:focus,
+.met_pager a:hover { text-decoration: none; }
+.met_pager .PageText { display: none; margin-left: 10px; color: #aaa; }
+.met_pager input { display: none; }
+.met_pager .firstPage,
+.met_pager .lastPage { height: auto; line-height: inherit; }
+.pager li { width: 49%; display: inline-block; }
+.pager li a { max-width: 100%; }
+$uicss #met-pager-btn{background: $thirdcolor$; background: $curpagebg$;border-color:$thirdcolor$;border-color:$curpagebg$; color: $curpagetxt$;}
+@media(max-width: 768px){
+	$uicss .content-left,$uicss .content-right{
+		padding: 0;
+		width: 100%;
+		float: left;
+	}
+}
+@media(max-width: 767px){
+	$uicss .content-left,$uicss .content-right{
+		padding: 0;
+		width: 100%;
+		float: left;
+	}
+}

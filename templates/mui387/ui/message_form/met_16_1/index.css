@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 留言表单 */
+.message-list-no .leftsidebar{margin-right:0;}
+$uicss { display: block; padding: 30px;background-color:$bodybgcolor$;background-color:$bgcolor$; }
+$uicss select { border-radius: 0; }
+$uicss input { border-radius: 0; }
+.btn-primary { border-radius: 0; background: $firstcolor$; border-color: $firstcolor$;background: $btncolor$; border-color: $btncolor$; color: $txtcolor$; }
+.btn-primary:hover { background: $thirdcolor$;background: $hovercolor$; border-color: $thirdcolor$;border-color: $hovercolor$; color: $hovertxtcolor$;}
+.met-message-submit .form-control.focus,.met-message-submit .form-control:focus { border-color: $thirdcolor$;border-color: $hovercolor$; }
+.met-message-submit .checkbox-primary input[type=radio]:checked+label::before,
+.met-message-submit .checkbox-primary input[type=checkbox]:checked+label::before { background: $thirdcolor$;background: $hovercolor$; border-color: $thirdcolor$;border-color: $hovercolor$; }
+.met-message-submit .checkbox-custom input[type=radio]:focus+label::before, .checkbox-custom input[type=checkbox]:focus+label::before { outline: 5px auto $thirdcolor$; }
+.met-message-submit .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover { background: #e4eaec; border-color: #e4eaec; }
+.met-message-submit.panel { box-shadow: none; background-color: $conbgcolor$;}
+$uicss label{color: $rcolor$;}
+.met-message-submit .form-control{color: $placecolor$;border-color: $bordercolor$;background-color: $sbgcolor$;}
+.met-message-submit ::-webkit-input-placeholder{color:$placecolor$ !important; }
+.met-message-submit ::-moz-placeholder{color:$placecolor$ !important; }
+.met-message-submit :-moz-placeholder{color:$placecolor$ !important; }
+.met-message-submit :-ms-input-placeholder{color:$placecolor$ !important; }
+$uicss .media-body{
+    width:100%;
+}
+$uicss .message-title{
+    color: $firstcolor$;
+}
+
+#getcode{height:24px;}
+@media (max-width: 767px){
+    $uicss {
+        padding: 0px;
+    }
+    .message_form .row{margin: 0;}
+    .message_form{padding:0 !important;}
+}

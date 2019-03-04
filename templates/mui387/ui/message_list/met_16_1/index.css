@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 留言列表 */
+$uicss{padding: 30px 0px;background:$bodybgcolor$;background:$bgcolor$;}
+.met-message-body .media .media-left i{font-size:36px;}
+.met-message-body .media .media-body{width:calc(100% - 46px);}
+@media (max-width: 767px){
+    $uicss {
+        padding: 15px 0px;
+    }
+    $uicss .m0{margin: 0px;}
+    $uicss .message_form{margin-top: 15px;}
+}
+.met-message-body,.met-message-body .list-group-item{background-color: transparent; background:$conbgcolor$;}
+.met-message-body .wb-user-circle{color: $iconcolor$!important;}
+.met-message-body .media-heading{color: $datecolor$!important;}
+.met-message-body p{color: $mcolor$;}
+.met-message-body .content{color: $rcolor$;background-color: $rbgcolor$;border-color: $rbordercolor$;}
+.met-message-body .list-group-dividered .list-group-item{border-top-color: $linecolor$;}
+.met-message-body .list-group-dividered .list-group-item:last-child{border-bottom-color: $linecolor$;}
+.met-message-body .list-group-dividered .list-group-item:first-child{border-top-color: transparent;}
+
+/*分页*/
+.met_pager { margin-top: 20px; text-align: center; }
+.met_pager * { display: inline-block; }
+.met_pager a { padding: 9px 15px; border: 1px solid $pagelinecolor$; border-right: none; background: $pagebg$; text-align: center; color: $pagetxt$; }
+.met_pager a:hover { background: $hoverpagebg$;color: $pagetxt$;color: $hoverpagetxt$; text-decoration: none; }
+.met_pager a.NextA { border-right: 1px solid $pagelinecolor$; }
+.met_pager .PreSpan,
+.met_pager .NextSpan { padding: 9px 15px; border: 1px solid $pagelinecolor$; background: $nopagebg$; color: $nopagetxt$; cursor: default; }
+.met_pager .firstPage,
+.met_pager .lastPage { min-width: 40px; height: 28px; line-height: 28px; }
+.met_pager a.Ahover {  background: $thirdcolor$; background: $hovercolor$;border-color:$thirdcolor$;border-color:$hovercolor$; color: $curpagetxt$; cursor: default; }
+.met_pager a.Ahover:hover { background: $thirdcolor$; background: $hovercolor$;border-color:$thirdcolor$;border-color:$hovercolor$; color: $curpagetxt$; }
+.met_pager a { text-decoration: none; }
+.met_pager a:active,
+.met_pager a:focus,
+.met_pager a:hover { text-decoration: none; }
+.met_pager .PageText { display: none; margin-left: 10px; color: #aaa; }
+.met_pager input { display: none; }
+.met_pager .firstPage,
+.met_pager .lastPage { height: auto; line-height: inherit; }
+.pager li { width: 49%; display: inline-block; }
+.pager li a { max-width: 100%; }
+$uicss #met-pager-btn{background: $thirdcolor$; background: $hovercolor$;border-color:$thirdcolor$;border-color:$hovercolor$; color: $curpagetxt$;}

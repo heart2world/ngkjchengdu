@@ -1,0 +1,15 @@
+{
+    "css":[
+        "{$metui_url2}vendor/filament-tablesaw/tablesaw.min.css",
+        "{$metui_url3}plugin/PhotoSwipe/photoswipe.min.css",
+        "{$metui_url3}plugin/PhotoSwipe/default-skin/default-skin.min.css",
+        "{$metui_url2}fonts/7-stroke/7-stroke.min.css",
+        "ui/css/index.css"
+    ],
+    "js":[
+        "{$metui_url2}vendor/jquery-appear/jquery.appear.min.js",
+        "{$metui_url2}js/Plugin/jquery-appear.min.js",
+        "{$metui_url3}js/editor.js",
+        "ui/js/index.js"
+    ]
+}

@@ -1,0 +1,738 @@
+
+/*分页*/
+$uicss .met_pager { 
+  margin-top: 20px; 
+  text-align: center;    
+  position: relative;
+  left: 0;
+  top: 0; 
+  }
+$uicss .met_pager * { 
+  display: inline-block; 
+}
+/*上一页 下一页*/
+$uicss .met_pager a { 
+  padding: 9px 15px;
+  border-right: none; 
+  text-align: center; 
+  color:$firstcolor$;
+  color:$btn_font_ok_color$;
+ }
+$uicss .met_pager a:hover { 
+  text-decoration: none; 
+}
+$uicss .met_pager .PreSpan,
+$uicss .met_pager .NextSpan { 
+  padding: 9px 15px; 
+  color:$secondcolor$;
+  color:$btn_font_none_color$;
+  cursor: default; 
+}
+$uicss .met_pager .firstPage,
+$uicss .met_pager .lastPage { 
+  min-width: 40px; 
+  height: 28px; 
+  line-height: 28px; 
+}
+$uicss .met_pager a.Ahover { 
+  border-color:$thirdcolor$;
+  border-color:$btn_font_bg$;
+  background: $thirdcolor$;
+  background: $btn_font_bg$;
+  color: $btn_font_color$; 
+  cursor: default; 
+}
+$uicss .met_pager a.Ahover:hover { 
+  border-color: $thirdcolor$;
+  background: $thirdcolor$; 
+  color: $btn_font_hover_color$; 
+}
+$uicss .met_pager a { 
+  text-decoration: none; 
+}
+$uicss .met_pager a:active,
+$uicss .met_pager a:focus,
+$uicss .met_pager a:hover { 
+  text-decoration: none; 
+}
+$uicss .met_pager .PageText { 
+  display: none;
+  margin-left: 10px; 
+  color: #aaa; 
+}
+$uicss .met_pager input { 
+  display: none; 
+}
+$uicss .met_pager .firstPage,
+$uicss .met_pager .lastPage { 
+  height: auto; 
+  line-height: inherit; 
+}
+$uicss .pager li { 
+  width: 49%; 
+  display: inline-block; 
+}
+$uicss .pager li a { 
+  max-width: 100%; 
+}
+$uicss #met-pager-btn{
+  border-color: $thirdcolor$;
+  background-color: $thirdcolor$;
+  border-color: $btn_font_bg$;
+  background-color: $btn_font_bg$;
+}
+$uicss dl,$uicss ol,$uicss ul {
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+$uicss .btn-primary{
+  color:$btn_font_color$;
+}
+
+
+$uicss.bgcolor{
+	background:$bodybgcolor$;
+ 	background:$background_color$;
+}
+$uicss{
+  padding-bottom:20px;
+}
+$uicss.bgpic{
+  background:url($background_img$) no-repeat;background-size: cover;background-position: center;
+}
+$uicss h1, $uicss h2, $uicss h3, $uicss h4, $uicss h5, $uicss h6,$uicss p, $uicss ul {
+  margin: 0;
+  padding: 0
+}
+$uicss img {
+  border: 0;
+  display: inline-block;
+  max-width: 100%;
+}
+$uicss ul,li,{
+  list-style: none;
+}
+body {
+  font: 14px Arial, "microsoft yahei", Helvetica, sans-serif;
+*font:14px "microsoft yahei", Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  overflow-x: hidden;
+}
+$uicss a {
+  font-size: 14px;
+  text-decoration: none;
+  transition: ease .65s;
+}
+$uicss .clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+$uicss .clearfix {
+*zoom:1;
+}/*IE/7/6*/
+$uicss h1, $uicss h2, $uicss h3, $uicss h4, $uicss h5, $uicss h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+$uicss i {
+  font-style: normal;
+}
+$uicss .left {
+  float: left;
+}
+$uicss .right {
+  float: right;
+}
+$uicss .noscript {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: #ddd;
+  color: red;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+$uicss em {
+  font-style: normal;
+}
+
+$uicss .lh-more {
+  display: inline-block;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: $thirdcolor$;
+  color: $box_morecolor$;
+  background: $box_morecolors$;
+  box-shadow: 0 0 10px rgba(12,3,6,.13);
+  position: relative;
+  z-index: 1;
+}
+$uicss .lh-more i {
+  float: right;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: $thirdcolor$;
+  background: $box_morecolor$;
+  color: $box_morecolors$;
+  font-size: 20px;
+  transition: ease .65s;
+  position: relative;
+  z-index: 1;
+}
+$uicss .lh-more i:after {
+  transition: ease-in .65s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+$uicss .lh-more:before {
+  transition: ease-out .35s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  background: $thirdcolor$;
+  background: $box_morecolor$;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+$uicss .lh-more:hover {
+  color: #fff;
+}
+$uicss .lh-more:hover:before {
+  width: 100%;
+}
+$uicss .lh-more:hover i {
+  color: $thirdcolor$;
+  color: $box_morecolor$;
+  transition-delay: .2s;
+}
+$uicss .lh-more:hover i:after {
+  width: 100%;
+  transition-delay: .2s;
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+$uicss .lh-other-nav {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  overflow: hidden;
+}
+$uicss .lh-other-l li {
+  float: left;
+  margin-right: 45px;
+  line-height: 60px;
+}
+$uicss .lh-other-l li.active a {
+  background: #b72024;
+  color: #fff;
+}
+$uicss .lh-other-l li.active a:before {
+  background: #fff;
+}
+$uicss .lh-other-l li a {
+  padding: 5px 10px 5px 25px;
+  color: #333;
+  position: relative;
+}
+$uicss .lh-other-l li a:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 1px;
+  background: #b72024;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transition: ease .65s;
+}
+$uicss .lh-other-l li a:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #b72024;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transition: ease .65s;
+}
+/*.lh-other-l li a:hover:before{width:0;}*/
+$uicss .lh-other-l li a:hover:after {
+  width: 100%;
+  left: 0;
+  transition-delay: .2s;
+}
+$uicss .lh-other-l li.active a:hover:before {
+  width: 6px;
+}
+$uicss .lh-other-r {
+  line-height: 60px;
+  color: #666;
+}
+$uicss .lh-other-r a {
+  color: #666;
+}
+$uicss .lh-other-r em {
+  margin: 0 5px;
+}
+$uicss .lh-other-r i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+$uicss .lh-other-r a:hover {
+  color: #b72024;
+}
+$uicss .lh-other-box {
+  padding: 3% 0 8%;
+  background: #EFEFEF;
+  background-attachment: fixed;
+  position: relative;
+}
+$uicss .lh-footer.other:before {
+  display: none;
+}
+$uicss .lh-footer-l.other {
+  border: none;
+  padding: 0;
+}
+$uicss .lh-footer-item.other {
+  width: auto;
+}
+$uicss .lh-footer-item.other li {
+  margin-top: 10px;
+  color: #999;
+}
+$uicss .lh-footer-item.other li em {
+  width: auto;
+}
+$uicss .lh-footer-l.other h3 {
+  margin: 10px 0 40px;
+}
+$uicss .lh-footer-share.other {
+  text-align: left;
+}
+$uicss .lh-footer-share.other a:first-child {
+  margin-left: 0 !important;
+}
+$uicss .lh-footer-gz.other li {
+  color: #999;
+}
+$uicss .lh-footer-nav.other {
+  padding: 25px 0;
+  margin-top: 50px;
+}
+$uicss .lh-footer.other .lh-about-h2 {
+  display: none;
+}
+$uicss .lh-viewpoint-h2 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+  position: relative;
+  text-align: center;
+  height: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+$uicss .lh-viewpoint-h2 span {
+  color:$thirdcolor$;
+  color:$titlecolor$;
+}
+$uicss .lh-viewpoint-h2:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  background:$thirdcolor$;
+  background:$titlecolor$;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -25px;
+}
+$uicss .lh-viewpoint-h3 {
+  text-align: center;
+  color:$secondcolor$;
+  color:$markcolor$;
+  text-transform: uppercase;
+}
+$uicss .lh-viewpoint-h4 {
+  color:$firstcolor$;
+  color:$desccolor$;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+$uicss .lh-viewpoint-item li {
+  border: 5px solid $box_borcolor$;
+  margin-top: 50px!important;
+  float: left;
+  width: 95%;
+  position: relative;
+  transition: ease .65s;
+}
+$uicss .lh-viewpoint-item li:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+$uicss .lh-viewpoint-item {
+  padding: 0 30px;
+}
+$uicss .lh-viewpoint-item li .img {
+  float: right;
+  max-width: 50%;
+  transform: translate(58px, -24px);
+  transition: ease .65s;
+  max-height:$img_maxh$px;
+  overflow-y: scroll;
+  text-align: center;
+}
+$uicss .lh-viewpoint-item li .img::-webkit-scrollbar{
+    display: none;
+  }
+$uicss .lh-viewpoint-item li .text {
+  width: 50%;$uicss 
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+$uicss .lh-viewpoint-item li .text h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color:$firstcolor$;
+  color:$box_titlecolor$;
+  margin: 50px 0 35px;
+  position: relative;
+  height: 22px;
+  line-height: 22px;
+  text-align:center;
+
+}
+$uicss .lh-viewpoint-item li .text h2:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background:$box_hrcolor$;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -20px;
+  transition: ease .65s;
+}
+$uicss .lh-viewpoint-item li .text h3 {
+  line-height: 24px;
+  color:$secondcolor$;
+  color: $box_desccolor$;
+  padding: 0 10px;
+}
+$uicss .lh-viewpoint-item li .text a {
+    margin: auto;
+    display: block;
+  margin-top: 15px;
+}
+$uicss .lh-viewpoint-item li:nth-child(2n) {
+  float: right;
+}
+$uicss .lh-viewpoint-item li:nth-child(2n) .text {
+  left: inherit;
+  right: 0;
+}
+$uicss .lh-viewpoint-item li:nth-child(2n) .img {
+  float: left;
+  transform: translate(-58px, -24px);
+}
+$uicss .lh-viewpoint-item li:nth-child(3) .text h2 {
+  margin: 30px 0 35px;
+}
+$uicss .lh-viewpoint-item li:nth-child(3) .text a {
+  margin-top: 30px;
+}
+.lh-viewpoint-item li>i:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid;
+  border-left: 5px solid;
+  border-color: $thirdcolor$;
+  border-color: $box_borhovcolor$;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  transition: ease .65s;
+}
+$uicss .lh-viewpoint-item li>i:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-color: $thirdcolor$;
+  border-color: $box_borhovcolor$;
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  transition: ease .65s;
+}
+$uicss .lh-viewpoint-item li:hover>i:before, $uicss .lh-viewpoint-item li:hover>i:after {
+  width: 101%;
+  height: 103%;
+  visibility: visible;
+}
+$uicss .lh-viewpoint-item li:hover .img {
+  transform: translate(0);
+}
+$uicss .lh-viewpoint-item li:hover .text h2:after {
+  background:$thirdcolor$;
+  background:$box_hrhovcolor$;
+}
+$uicss .lh-viewpoint-item li:hover {
+  box-shadow: 0 0 16px rgba(12,3,6,.3);
+}
+$uicss .portfolio-masonry-wrapper{
+  padding-top: 15px;
+}
+@keyframes updown {
+ 0% {
+transform:translateY(0);
+}
+ 50% {
+transform:translateY(-10px);
+}
+ 100% {
+transform:translateY(0);
+}
+}
+@keyframes shadowOpacity {
+ 0% {
+opacity:0
+}
+ 100% {
+opaciy:1;
+}
+}
+@keyframes mapLine {
+ 0% {
+width:0
+}
+ 100% {
+width:50%;
+}
+}
+@keyframes mapLine1 {
+ 0% {
+height:0
+}
+ 100% {
+height:100%;
+}
+}
+@media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1366px) {
+}
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+$uicss .container {
+  width: 100%;
+  padding: 0;
+}
+$uicss .lh-other-container {
+}
+$uicss .lh-footer.other .lh-wapAbout-h2 {
+  display: none;
+}
+}
+@media screen and (max-width: 768px) {
+  $uicss .lh-viewpoint-item li {
+    margin-top: 20px!important;
+  }
+  $uicss .lh-viewpoint-item li .img{
+    max-width: 100%;
+  }
+$uicss .lh-mobile-banner, $uicss .lh-footer.other .lh-wapAbout-h2 {
+  display: block;
+}
+$uicss .lh-footer-item li, $uicss .lh-footer-item.other li {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed #4C4C4C;
+  color: #fff;
+}
+$uicss .lh-footer-item.other li em {
+  width: 280px;
+}
+$uicss .lh-footer-item.other li:last-child {
+  margin-top: 0;
+}
+$uicss .lh-footer-tel, .lh-footer-share.other {
+  text-align: center;
+}
+$uicss .lh-footer-gz.other {
+  margin-bottom: 20px;
+}
+$uicss .lh-other-r, .lh-news-item li span, $uicss .lh-ban {
+  display: none;
+}
+$uicss .lh-other-l {
+  float: none;
+  text-align: center;
+}
+$uicss .lh-other-l li {
+  display: inline-block;
+  float: none;
+  margin: 0 5px;
+}
+$uicss .lh-viewpoint-h4 {
+  font-size: 12px;
+}
+$uicss .lh-viewpoint-item {
+  padding: 0 10px;
+}
+$uicss .lh-viewpoint-item li {
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+}
+$uicss .lh-viewpoint-item li .img, $uicss .lh-viewpoint-item li:nth-child(2n) .img {
+  width: 100%;
+  float: none;
+  transform: translate(0, 0);
+}
+$uicss .lh-viewpoint-item li>i {
+  display: none;
+}
+$uicss .lh-viewpoint-item li .text {
+  width: 100%;
+  position: static;
+}
+$uicss .lh-viewpoint-item li .text h2 {
+  font-size: 18px;
+  margin: 20px 0 25px;
+}
+$uicss .lh-viewpoint-item li:hover .img, $uicss .lh-viewpoint-item li:nth-child(2n):hover .img {
+  transform: translate(0, 0);
+}
+$uicss .lh-viewpoint-item li .text a.lh-more {
+  display: none;
+}
+$uicss .lh-viewpoint-item li {
+  box-shadow: 0 0 16px rgba(12,3,6,.3);
+  padding-bottom: 10px;
+}
+$uicss .lh-viewpoint-item li .text h3 {
+  font-size: 12px;
+}
+$uicss .lh-other-nav .container {
+  padding: 0;
+}
+$uicss #OtherNav .lh-other-l li {
+  float: left;
+}
+
+@keyframes lhImgRight {
+ 0% {
+transform:translateX(-100%) scale(1.2);
+opacity:0;
+}
+ 50% {
+transform:translateX(0) scale(1.1);
+opacity:1;
+}
+ 100% {
+transform:translateX(0) scale(1);
+opacity:1;
+}
+}
+@keyframes lhFadeInRight {
+ 0% {
+opacity:0;
+transform:translateX(100%);
+}
+ 100% {
+opacity:1;
+transform:translateX(0);
+}
+}
+@keyframes lhFadeInUp {
+ 0% {
+opacity:0;
+transform:translateY(100%);
+}
+ 100% {
+opacity:1;
+transform:translateY(0);
+}
+}
+@keyframes lhFadeInDown {
+ 0% {
+transform:translateY(-100%);
+opacity:0;
+}
+ 100% {
+transform:translateY(0);
+opacity:1;
+}
+}
+@keyframes logoFade {
+ 0% {
+opacity:0;
+transform: translateY(-100%);
+}
+ 100% {
+opacity:100;
+transform: translateY(-50%);
+}
+}
+@keyframes logoWidth {
+ 0% {
+width:0;
+}
+ 100% {
+width:250%;
+}
+}
+@keyframes lineWidth {
+ 0% {
+width:0;
+}
+ 100% {
+width:100%;
+}
+}
+@keyframes lineHeight {
+ 0% {
+height:0;
+}
+ 100% {
+height:100%;
+}
+}

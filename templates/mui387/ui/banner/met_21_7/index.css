@@ -1,0 +1,79 @@
+/* 轮播图 */
+.hide { display: none; }
+.met-video { position: absolute; top: 0; left: 0; right: 0px; bottom: 0px; overflow: hidden; z-index: -999999; }
+.met-video video { position: relative; z-index: -99999; object-fit: cover; }
+$uicss.met-page { padding-top: 0 !important; }
+$uicss { width: 100%; height:100vh; position: relative; overflow: hidden; }
+$uicss.banner-ny-h{ height:auto}
+$uicss .banner-item { width: 100%; height: 100%; float: left; overflow: hidden; position: relative; background-repeat: no-repeat; background-position: center; background-size: cover; max-height:100vh;}
+$uicss .banner-item img{
+width: 100%;
+}
+$uicss .banner { width: 100%; height: 100%; position: relative; overflow: hidden; z-index: 4;max-height:100vh;}
+$uicss .banner .banner-warpper { width: 100%; height: 100%; margin: 0; padding: 0; list-style: none; transition-timing-function: ease }
+$uicss .banner.isSwiper .banner-warpper { width: 1000%; }
+$uicss .banner-text { width: 100%; height: 100%; position: absolute; left: 0; top: 0 }
+$uicss .banner-text .container { width: 80%; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+$uicss .banner-text h3, $uicss .banner-text p { color: $firstcolor$; color: $titlecolor$; }
+$uicss .banner-text h3 { margin: 0; font-size: 48px; font-weight: 100 }
+$uicss .banner-text p { font-size: 24px; margin: 20px 0 20px 0; text-shadow: none; font-weight: 100 }
+$uicss .banner-text .banner-icon { font-size: 20px; }
+$uicss .banner-text .banner-icon .pe-mail { font-size: 24px; position: relative; top: 3px; }
+$uicss .banner-text .line { width: 100px; height: 4px; background-color: $thirdcolor$; background-color: $hovercolor$; display: inline-block; margin: 0 auto; }
+$uicss .banner-text.p-4 { text-align: center; }
+$uicss .banner-text.p-4 .line { display: block; }
+$uicss .banner-text.p-0 { text-align: left; }
+$uicss .banner-text.p-1 { text-align: right; }
+$uicss .banner-text.p-0 .line { margin: 0; }
+$uicss .more { border: 1px solid; border-color: $firstcolor$; border-color: $titlecolor$; color: $firstcolor$; color: $titlecolor$; overflow: hidden; display: inline-block; height: 40px; line-height: 40px; text-align: center; -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; -ms-transition: all 0.6s cubic-beziercubic-bezier(0.77, 0, 0.175, 1) 200ms; -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; width: 160px; cursor: pointer; margin-top: 50px; transition-duration: 1s; }
+$uicss .more span { display: block; width: 100%; position: relative; text-align: center; height: 40px; line-height: 40px; -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 100ms; -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 100ms; -ms-transition: all 0.6s cubic-beziercubic-bezier(0.77, 0, 0.175, 1) 100ms; -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 100ms; transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 100ms; color: $firstcolor$; color: $titlecolor$; }
+$uicss .more span:after { content: attr(data-title); position: absolute; height: 40px; top: 0px; left: 0px; right: 0; color: transparent; transform: translate(0, 100%); -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; -ms-transition: all 0.6s cubic-beziercubic-bezier(0.77, 0, 0.175, 1) 200ms; -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms; }
+$uicss .more:hover { border-color: $thirdcolor$; border-color: $hovercolor$; background-color: $thirdcolor$; background-color: $hovercolor$; }
+$uicss .more:hover span { transform: translate(0, -100%); }
+$uicss .more:hover span:after { background-color: $thirdcolor$; background-color: $hovercolor$; color: #fff; }
+$uicss .banner-next { z-index: 99; position: absolute; bottom: 80px; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -o-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); cursor: pointer; text-align: center; color: $firstcolor$; color: $titlecolor$; }
+$uicss .banner-next span { display: block; }
+$uicss .banner-next .next-text { -webkit-animation: fadeInDown 2s infinite; -moz-animation: fadeInDown 2s infinite; -o-animation: fadeInDown 2s infinite; -ms-animation: fadeInDown 2s infinite; animation: fadeInDown 2s infinite; position: relative; top: 35px; }
+$uicss .banner-next .next-icon { font-size: 64px; }
+$uicss .banner-ctrl { position: absolute; width: 100%; top: 50%; left: 0; z-index: 99 }
+$uicss .banner-ctrl .left { position: absolute; font-size: 72px; color: #fff; top: 50%; transform: translateY(-50%); cursor: pointer;left: 0}
+$uicss .banner-ctrl .right { position: absolute; font-size: 72px; color: #fff; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer }
+$uicss.banner-ny-h { }
+$uicss.banner-ny-h .banner-item { }
+$uicss.banner-ny-h .banner-next { display: none }
+$uicss.banner-ny-h .banner-ctrl { display: none }
+$uicss.banner-ny-h .banner-text .title { margin-bottom: 15px; font-size: 36px; height: auto; -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0ms; -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0ms; -ms-transition: all 0.6s cubic-beziercubic-bezier(0.77, 0, 0.175, 1) 0ms; -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0ms; transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0ms }
+$uicss.banner-ny-h .banner-text .subtitle { margin-top: 15px; font-size: 22px; -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 400ms; -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 400ms; -ms-transition: all 0.6s cubic-beziercubic-bezier(0.77, 0, 0.175, 1) 400ms; -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 400ms; transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 400ms }
+@media (max-width:479px) {
+    $uicss .banner-text h3 { font-size: 16px }
+    $uicss .banner-text p { margin-top: 10px; font-size: 20px }
+}
+@media (max-width:1024px) { 
+    .met-video .video-bg { display:block; height: 100%; top: 0; position: absolute; width: 100%; left: 0; height: 100%; top: 0; position: absolute; width: 100%; left: 0; }
+    $uicss .banner-text h3 { font-size: 20px }
+    $uicss .banner-text p { font-size: 30px }
+    $uicss.banner-ny-h { min-height: 200px; height: 200px; }
+    $uicss.banner-ny-h .banner-item { min-height: 200px; }
+    $uicss.banner-ny-h .banner-text .title { font-size: 26px; }
+    $uicss.banner-ny-h .banner-text .subtitle { font-size: 18px; }
+}
+@media (max-width:767px) {
+    $uicss .banner-next{
+        bottom:0;
+    }
+    $uicss-ny { height: 90px }
+    $uicss-ny h1, $uicss-ny h2 { font-size: 26px }
+    $uicss { height: 500px; }
+    $uicss.banner-ny-h { height: 150px }
+    $uicss.banner-ny-h .banner-text .title { margin-bottom: 15px; padding: 0; font-size: 24px; height: auto }
+    $uicss.banner-ny-h .banner-text .subtitle { margin-top: 15px; font-size: 16px }
+    $uicss .banner-text .container { width: 100% }
+    $uicss .banner-text.p-5 .container .banner-text-con { width: 100% }
+    $uicss .banner-text h3 { font-size: 18px }
+    $uicss .banner-text p { margin-top: 15px; font-size: 24px }
+    $uicss .banner-text .btn-more { margin-top: 20px; font-size: 16px }
+}
+
+/* 内页轮播 */
+$uicss-ny { background-color: $bodybgcolor$; background-color: $ny_bgcolor$; height: 120px; }
+$uicss-ny h1 { margin: 0px; padding: 10px 30px; font-size: 35px; text-shadow: none; color: $firstcolor$; color: $ny_titlecolor$; }

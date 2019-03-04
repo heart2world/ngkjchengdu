@@ -1,0 +1,124 @@
+$uicss{
+	padding: 70px 0;
+	background-color: $bodybgcolor$;
+	background-color: $bgcolor$;
+}
+$uicss select.form-control{
+	background: $bodybgcolor$;
+	background: $bgcolor$;
+}
+$uicss  .form-control{
+	border-bottom-width:1px; 
+	border-bottom-style:solid;
+	border-bottom-color:$secondcolor$;
+	border-bottom-color:$bottom_color$;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	background-color: $bodybgcolor$;
+	background-color: $bgcolor$;
+	border-radius: 0!important;
+}
+$uicss .form-control option{
+	background-color: $secondcolor$;
+	background-color: $select_item$;
+}
+$uicss  .form-group.m-b-0 .btn-primary
+{
+	display: block;
+	outline: none;
+	padding: 20px;
+	color: $firstcolor$;
+	color: $btn_color$;
+	text-transform: uppercase;
+	background: linear-gradient(135deg, $btn_bg$ 0%,$btn_bg_right$ 100%);
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 14px;
+	font-family: roboto, helvetica;
+	font-weight: 200;
+	letter-spacing: 1px;
+	text-decoration: none;
+	box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	border-color: $bodybgcolor$;
+	border-color: $bgcolor$;
+}
+$uicss  .form-group.m-b-0 .btn-primary:hover{
+	text-shadow: 0 0 10px rgba(255,255,255, 1), 0 0 50px rgba(255, 255, 255, .8), 0 0 75px rgba(255, 255, 255, .6), 0 0 76px rgba(255, 255, 255, .4), 0 0 77px rgba(255, 255, 255, .5), 0 0 78px rgba(255, 255, 255, .4), 0 0 79px rgba(255, 255, 255, .3), 0 0 80px rgba(255, 255, 255, .2), 0 0 85px rgba(255, 255, 255, .1);
+}
+$uicss  .myfeedback{
+	width: $form_width$px;
+	max-width: 100%;
+	margin: 0 auto;
+    display: block;
+}
+/*不能为空时文本框的样式*/
+$uicss  .has-danger .form-control{
+	 border-color: #f96868;
+     box-shadow:none;
+}
+$uicss  .has-danger .input-group-addon
+{
+	border-top-color: $bodybgcolor$;
+	border-right-color: $bodybgcolor$;
+}
+$uicss .contact_us{
+	padding: 20px 0;
+}
+$uicss .ewm{
+	padding: 10px 0;
+}
+$uicss .ewm img{
+	width: 150px;
+}
+$uicss .left-title span{
+	color: $firstcolor$;
+	color: $left_title_color$;
+}
+$uicss .contact_us span{
+	color: $secondcolor$;
+	color: $left_content_title$;
+	float: left;
+}
+$uicss .contact_us div p{
+	color: $thirdcolor$;
+	color: $left_content$;
+}
+$uicss .left-content-title{
+	font-size: 13px;
+}
+$uicss .column_inner{
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:20px;
+	border-radius:0px;
+	position:relative;
+}
+$uicss .column_containter{
+	z-index:3;
+	position:relative;
+}
+$uicss .qfy-element{
+	position: relative;
+	line-height:1.5em;
+	background-position:left top;
+	background-repeat: no-repeat;
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+	padding-right:0;
+	padding-left:4px;
+	border-radius:0px;
+}
+@media(max-width: 767px)
+{
+	$uicss-body{
+		padding:50px 10px;
+	}
+}
